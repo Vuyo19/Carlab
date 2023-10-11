@@ -1,0 +1,56 @@
+### Hello World Testing
+GET http://localhost:3000 HTTP/1.1 
+### 
+GET http://localhost:3000 HTTP/1.1  
+
+###
+GET https://localhost:3000 HTTP/1.1
+
+### Cars ------------
+GET https://localhost:3000/api/orders HTTP/1.1
+### 
+GET https://localhost:3000/api/cars HTTP/1.1  
+### 
+POST https://localhost:3000/api/cars HTTP/1.1 
+Content-Type: application/json
+
+{
+    "id": "4", 
+    "name": "Ford", 
+    "model": "Mustang", 
+    "color": "Blue"
+} 
+### 
+DELETE https://localhost:3000/api/cars/6526ce19bc88b40d5e13b568 HTTP/1.1 
+
+### Users ------------ 
+POST https://localhost:3000/api/users/signup HTTP/1.1 
+Content-Type: application/json
+
+{
+    "username": "lhamilton44", 
+    "password": "neversee2021"
+} 
+### 
+POST https://localhost:3000/api/users/login HTTP/1.1 
+Content-Type: application/json
+
+{
+    "username": "lhamilton44", 
+    "password": "neversee2021"
+} 
+
+### Users and Cars ------------  
+POST https://localhost:3000/api/cars HTTP/1.1 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxoYW1pbHRvbjQ0IiwidXNlcmlkIjoiNjUyNmRhOTRlODkzYjUzYmMxZDk4ZWU5IiwiaWF0IjoxNjk3MDQ2MTcxLCJleHAiOjE2OTcwNDk3NzF9.qWkKaMphdKasL0lkuSk_2hxERiAVryV0K3FCsHFwNQU
+
+{
+    "id": 33, 
+    "name": "Porsche",
+    "model": "Macan", 
+    "color": "Black"
+}
+
+
+
